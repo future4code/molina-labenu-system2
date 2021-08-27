@@ -52,6 +52,8 @@ const createTables = () => connection
       FOREIGN KEY(fk_teacher) REFERENCES skill(id)
    );
 
+   ALTER TABLE class ADD COLUMN type ENUM ("Integral", "Noturna");
+
      
    `)
    .then(() => { console.log("Tabelas criadas") })
