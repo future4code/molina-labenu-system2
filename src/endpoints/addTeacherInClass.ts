@@ -2,7 +2,7 @@ import { connection } from './../data/connection';
 import { Request, Response } from 'express';
 
 
-const addTeacherInClass = async(req: Request, res: Response) =>{
+const addTeacherInClass = async(req: Request, res: Response): Promise<void> =>{
     try {
         const {id, class_id} = req.body
 
