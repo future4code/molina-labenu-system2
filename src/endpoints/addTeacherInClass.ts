@@ -19,7 +19,9 @@ const addTeacherInClass = async(req: Request, res: Response): Promise<void> =>{
         res.status(200).send('Atualizado com sucesso!')
         
     } catch (error) {
-        res.status(500).send('Erro inesperado!')
+        res.status(400).send({
+            message: error.message || error.sqlMessage
+         })
     }
 }
 
