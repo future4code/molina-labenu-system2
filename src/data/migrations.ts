@@ -18,7 +18,7 @@ const createTables = () => connection
       name VARCHAR(255) NOT NULL,
       email VARCHAR(255) NOT NULL UNIQUE,
       birthdate DATE NOT NULL,
-      class_id INT NOT NULL,
+      class_id INT,
       FOREIGN KEY(class_id) REFERENCES class(id) 
    );
    CREATE TABLE IF NOT EXISTS students(
@@ -26,7 +26,7 @@ const createTables = () => connection
       name VARCHAR(255) NOT NULL,
       email VARCHAR(255) NOT NULL UNIQUE,
       birthdate DATE NOT NULL,
-      class_id INT NOT NULL,
+      class_id INT,
       FOREIGN KEY(class_id) REFERENCES class(id) 
    );
    CREATE TABLE IF NOT EXISTS hobbies(
