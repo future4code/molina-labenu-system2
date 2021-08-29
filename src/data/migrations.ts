@@ -51,11 +51,8 @@ const createTables = () => connection
       PRIMARY KEY (fk_teacher, fk_skill),
       FOREIGN KEY(fk_skill) REFERENCES teachers(id),
       FOREIGN KEY(fk_teacher) REFERENCES skill(id)
-   );
+   ); 
 
-
-
-     
    `)
    .then(() => { console.log("Tabelas criadas") })
    .catch(printError)
