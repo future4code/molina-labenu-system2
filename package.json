@@ -4,10 +4,7 @@
    "description": "",
    "main": "index.js",
    "scripts": {
-      "start": "node ./build/index.js",
-      "dev": "tsnd --transpile-only --ignore-watch node_modules ./src/index.ts",
-      "build": "tsc",
-      "migrations": "tsnd ./src/data/migrations.ts"
+      "start": "node ./build/index.js"
    },
    "author": "",
    "license": "ISC",
