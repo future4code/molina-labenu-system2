@@ -11,7 +11,8 @@ const createTables = () => connection
       name VARCHAR(255) NOT NULL,
       inicial_date DATE NOT NULL,
       final_date DATE NOT NULL,
-      module ENUM ('0', '1', '2', '3', '4', '5', '6', '7')
+      module ENUM ('0', '1', '2', '3', '4', '5', '6', '7'),
+      type ENUM ('Integral', 'Noturno')
    );
    CREATE TABLE IF NOT EXISTS teachers(
       id INT PRIMARY KEY AUTO_INCREMENT,
@@ -52,7 +53,7 @@ const createTables = () => connection
       FOREIGN KEY(fk_teacher) REFERENCES skill(id)
    );
 
-   ALTER TABLE class ADD COLUMN type ENUM ("Integral", "Noturna");
+
 
      
    `)
